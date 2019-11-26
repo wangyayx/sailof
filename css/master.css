@@ -1,0 +1,201 @@
+@charset "utf-8";
+.content_title,.content_title a {
+	line-height: 50px;
+	font-weight: bold;
+	color: #004387;
+	font-size: 24px;
+}
+.content_titles {
+	padding-left:24px;
+}
+.in_sail {
+	width:698px;
+	float:left;
+	padding-top:30px;
+}
+.in_sail img {
+	width:100%;
+	display:block;
+}
+.brightPoint_box {
+	width:480px;
+	float:right;
+	padding-top:30px;
+}
+.brightPoint {
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+	height: 280px;
+	padding: 20px 30px 30px 30px;
+}
+.brightPoint ul {
+	margin-bottom:10px;
+}
+.brightPoint li {
+	float: left;
+	background: url(../img/index/point.png) no-repeat 0 50%;
+	width: 45%;
+	padding-left: 5%;
+	line-height: 30px;
+}
+.brightPoint p {
+	line-height: 30px;
+	text-indent: 2em;
+}
+.exScope {
+	padding-top: 35px;
+	margin-bottom: 48px;
+}
+.exScope li {
+	width: 240px;
+	height: 240px;
+	float: left;
+	position: relative;
+	border: 1px solid #efefef;
+	background-size: 100% 100%;
+}
+.exScope li:hover > .picMask {
+	display: block;
+}
+.exScope li:hover > p {
+	display: block;
+}
+.exScope .picMask {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+	background-color: rgba(2,42,55,0.5);
+	display: none;
+}
+.exScope p {
+	width: 240px;
+	margin-top: -160px;
+	color: #fff;
+	z-index: 2;
+	text-align: center;
+	display: none;
+}
+.exScope li > h4 {
+	position: absolute;
+	top: 240px;
+	background-color: #fff;
+	font-size: 18px;
+	width: 101%;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 0px;
+	font-family: YouYuan;
+	color:#004387;
+	font-weight: bold;
+}
+.exScope span {
+	font-size: 14px;
+	color: #fff;
+	display: inline-block;
+	line-height: 30px;
+	width: 180px;
+	text-align: left;
+}
+.exPhoto ul {
+	width:1218px;
+	zoom:1;
+}
+.exPhoto li {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 386px;
+}
+.exPhoto li img {
+	width: 100%;
+}
+.foreignexCoop {
+	padding-top: 10px;
+}
+.foreignexCoop li {
+	width: 220px;
+	height: 120px;
+	float: left;
+	position: relative;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	margin-right: 20px;
+}
+.foreignexCoop li:hover > .picMask2 {
+	display: block;
+}
+.foreignexCoop li:hover {
+	cursor: pointer;
+}
+.foreignexCoop li:hover > p {
+	display: block;
+}
+.foreignexCoop .picMask2 {
+	width: 220px;
+	height: 120px;
+	top: 0;
+	z-index: 1;
+	background-color: rgba(2,42,55,0.5);
+	display: none;
+}
+.foreignexCoop p {
+	width: 200px;
+	margin-top: -100px;
+	color: #fff;
+	z-index: 2;
+	text-align: center;
+	font-size: 12px;
+	display: none;
+	line-height: 20px;
+	padding: 0px;
+}
+.exCoop {
+	padding-top: 30px;
+	padding-bottom:50px;
+}
+.exCoop li {
+	width: 100px;
+	height: 100px;
+	float: left;
+	position: relative;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	margin-right: 20px;
+}
+.exCoop li:hover > .picMask {
+	display: block;
+}
+.exCoop li:hover {
+	cursor: pointer;
+}
+.exCoop li:hover > p {
+	display: block;
+}
+.exCoop .picMask {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+	background-color: rgba(2,42,55,0.5);
+	display: none;
+}
+.exCoop p {
+	width: 100px;
+	margin-top: -100px;
+	color: #fff;
+	z-index: 2;
+	text-align: center;
+	font-size: 12px;
+	display: none;
+	line-height: 20px;
+	padding: 0px;
+}
+.exCoop_more {
+	text-align:right;
+	padding-right:30px;
+}
+.exCoop_more a {
+	font-size:16px;
+}
