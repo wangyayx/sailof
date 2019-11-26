@@ -1,4 +1,120 @@
 @charset "utf-8";
+.currExp {
+	width: 420px;
+	height: 280px;
+	position: absolute;
+	background-color: rgba(0,67,135,0.8);
+	top: 110px;
+	right: 5%;
+	z-index: 1;
+	color: #fff;
+	padding: 20px;
+}
+.currExp > h2 {
+	color: #fff;
+	padding-left: 20px;
+	line-height: 50px;
+	font-size: 25px;
+	padding-bottom: 10px;
+}
+.currExp > h3 {
+	color: #fff;
+	padding-left: 20px;
+	font-size: 24px;
+	line-height: 38px;
+}
+.currExp > h4 {
+	color: #fff;
+	font-size: 24px;
+	padding-left: 20px;
+	line-height: 50px;
+	font-weight: normal;
+}
+.currExp li {
+	float: left;
+	text-align: center;
+	width: 50%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.currExp li > button {
+	width: 120px;
+	height: 40px;
+	color: #0079b4;
+	border: 0px;
+	border-radius: 5px;
+	background-color: #fdfdfd;
+}
+.banner-swiper {
+	position:relative;
+	width:100%;
+	height:560px;
+	overflow:hidden
+}
+.banner-swiper .swiper-wrapper li {
+	float:left;
+	width:100%
+}
+.banner-swiper .swiper-wrapper li a {
+	position:relative;
+	display:block;
+	width:100%;
+	height:100%;
+	background:#c7c7c7;
+	background:#008eb7 url(../../../images/frontend/banner1.png) center center no-repeat
+}
+.banner-swiper .swiper-wrapper li a .release {
+	position:absolute;
+	width:670px;
+	height:50px;
+	line-height:50px;
+	top:50%;
+	left:50%;
+	margin-left:-612px;
+	margin-top:-50px;
+	color:#fff;
+	font-size:48px
+}
+.banner-swiper .swiper-wrapper li a .note {
+	position:absolute;
+	width:670px;
+	height:50px;
+	line-height:50px;
+	top:50%;
+	left:50%;
+	margin-left:-612px;
+	margin-top:0px;
+	color:#fff;
+	font-size:20px
+}
+.banner-swiper img {
+	display:block;
+	width:100%;
+	height:100%
+}
+.banner-swiper .swiper-pagination {
+	position:absolute;
+	left:0;
+	right:0;
+	text-align:center;
+	bottom:15px
+}
+.banner-swiper .swiper-pagination .pagination-inner {
+	display:inline-block;
+	*zoom:1
+}
+.banner-swiper .swiper-pagination .pagination-inner .swiper-pagination-switch {
+	float:left;
+	width:28px;
+	height:7px;
+	margin:0 8px;
+	background:#81c7db;
+	cursor:pointer
+}
+.banner-swiper .swiper-pagination .pagination-inner .swiper-active-switch {
+	background:#fff
+}
+
 .content_title,.content_title a {
 	line-height: 50px;
 	font-weight: bold;
@@ -97,6 +213,38 @@
 	line-height: 30px;
 	width: 180px;
 	text-align: left;
+}
+.activeNews{
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+.activeNews dl{}
+.activeNews dl dt{
+	padding-top: 50px;
+	width: 496px;
+    float: left;
+}
+.activeNews dl dt img{
+	width:100%;
+}
+.activeNews dl dd{
+	width: 55%;
+    float: right;
+}
+.news {
+	border: 1px solid #e5e5e5;
+	background-color: #fff;
+	height: 240px;
+	padding: 30px;
+}
+.news ul {
+	width: 90%;
+	height: 150px;
+	padding-left: 60px;
+}
+.news ul li {
+	line-height: 30px;
+	list-style-image: url(../img/index/point.png);
 }
 .exPhoto ul {
 	width:1218px;

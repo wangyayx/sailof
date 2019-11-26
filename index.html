@@ -9,21 +9,22 @@
 <link href="css/base.css" rel="stylesheet" type="text/css">
 <link href="css/master.css" rel="stylesheet" type="text/css">
 <link href="css/addition.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 </head>
 
 <body>
-<div id="header">
+<div id="header" class="noramlHd">
 	<div class="p_w pr">	
 		<ul class="ac-gn-header">
 				<div class="ac-gn-menuicon-bread" onclick="javascript:changeMenu();">
 					<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
 					<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
 				</div>
-			<div class="ac-gn-menuicon-logo"><a href="index.html"><img src="images/logo.png"></a></div>
+			<div class="ac-gn-menuicon-logo"><a href="index.html"><img src="img/logo.png"></a></div>
 		</ul>
 		<div class="g-header">
 			<div class="clearfix">
-				<div class="ac-gn-item ac-gn-item-logo"><a href="index.html"><img src="images/logo.png"></a></div>
+				<div class="ac-gn-item ac-gn-item-logo"><a href="index.html"><img src="img/logo.png"></a></div>
 				<ul class="ac-gn-list">			
 					<li class="ac-gn-item"><a href="index.html" class="nav_item01">首页</a>
 						<div class="children_menu">
@@ -51,7 +52,54 @@
 		</div>
 	</div>
 </div>
+<div class="currExp">
+	<div class="picMask">
+	</div>
 
+	<h2>上海之帆——走进东盟经贸巡展</h2>
+	<h3>新加坡站: 2020年3月12-13日</h3>
+	<h3>泰&nbsp;&nbsp;国&nbsp;&nbsp;站: 2020年3月16-17日 </h3>
+
+	<div>
+		<ul>
+			<li style="margin-left:-10px;">
+				<a href="expoCompanyScheduled.html">展位预定</a>
+			</li>
+			<li>
+				<a href="expoPersonScheduled.html">观众预登记</a>
+			</li>
+		</ul>
+
+	</div>
+	<h3>距本届展会开幕还有 <span id="txtDays" style="color:red;font-size:26px;font-weight:600;">106</span> 天</h3>
+</div>
+<div class="banner-swiper">
+	<ul class="swiper-wrapper clearfix">
+		<li class="swiper-slide">
+			<a href="javascript:;" style="background-image:url(img/index/banner1.jpg); background-size:100% 100%;">
+				<!--<div class="release">行动纲领</div>
+				<div class="note">共建“一带一路”黄金段, “丝路”征程一路歌</div>-->
+			</a>
+		</li>
+		<li class="swiper-slide">
+			<a href="javascript:;" style="background-image:url(img/index/banner2.jpg); background-size:100% 100%;">
+				<!--<div class="release">殷殷期盼</div>
+				<div class="note">历史尘烟越丝路，绵绵不绝今再复。互联互通相携远，旅游先行人心慕</div>-->
+			</a>
+		</li>
+		<li class="swiper-slide">
+			<a href="javascript:;" style="background-image:url(img/index/banner3.jpg);background-size:100% 100%;">
+				<!--<div class="release">历史使命</div>
+				<div class="note">弘扬丝路精神, 复兴伟大中国梦</div>-->
+			</a>
+		</li>
+		
+	
+	</ul>
+	<div class="swiper-pagination">
+		<div class="pagination-inner clearfix"></div>
+	</div>
+</div>
 <div class="p_w wrap">
 	<div class="clearfix">
 		<div class="in_sail">
@@ -158,6 +206,31 @@
 				</h4>
 			</li>
 		</ul>
+	</div>
+	<div class="activeNews">
+		<dl class="clearfix">
+			<dt><img src="img/index/news.png" /></dt>
+			<dd>
+				<div class="content_title content_titles">最新动态</div>
+				<div class="news">
+					<ul>
+						<li>
+							<a href="page.html?pageName=exchangeActivety">【展前交流活动】</a> <a href="page.html?pageName=exchangeActivety1">2019“上海之帆”斯洛文尼亚展前座谈会</a>
+						</li>
+						<li>
+							<a href="page.html?pageName=tradePost">【商情发布】</a><a href="#">白俄罗斯共和国食品工业企业即将参加2019中食展( SIAL China2019)---2019-4-26</a>
+						</li>
+						<li>
+							<a href="page.html?pageName=tradePost">【商情发布】</a> <a href="#">斯洛文尼亚FAM – NT d.o.o公司寻求中国供应商---2019-3-1</a>
+						</li>
+						<li>
+							<a href="page.html?pageName=tradePost">【商情发布】</a><a href="#">爱沙尼亚一食品生产企业寻求中国进口商---2018-12-27</a><!--<label style="margin-left:50px;color: #004387;">查看更多</label>-->
+						</li>
+					   
+					</ul>
+				</div>
+			</dd>
+		</dl>
 	</div>
 	<div class="exPhoto">
 		<div class="content_title content_titles">
@@ -559,5 +632,17 @@
 		</li>
 	</ul>
 </div>
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript">
+	var bannerSwiper = new Swiper('.banner-swiper', {
+		slideElement: 'li',
+		autoplay: 5000,
+		loop: true,
+		pagination: '.banner-swiper .pagination-inner',
+		paginationClickable: true,
+		autoplayDisableOnInteraction: false
+
+	});
+</script>
 </body>
 </html>

@@ -40,6 +40,75 @@ article, aside, dialog, footer, header, section, nav, figure, menu{display:block
 .blue{color:#325ca9;}
 .p_w{margin: 0 auto;max-width:1200px;}
 .wrap{background-color: #f8f8f8;}
+/*************************/
+.noramlHd{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+}
+#header .ac-gn-item-logo{float:left;position: relative;z-index:2; padding-left:10px;}
+#header .ac-gn-item-logo img{width: 71px;margin: 28px 0 0 0;}
+#header .ac-gn-list{width:72.5%;float:right; text-align:right;}
+#header .ac-gn-list .ac-gn-item{display:inline-block;}
+#header .ac-gn-list, #header .ac-gn-list .ac-gn-item{z-index: 10;position: relative;}
+#header .ac-gn-list .ac-gn-item{text-align:center;}
+#header .ac-gn-list .ac-gn-item a{display:block;color:#fff;font-size:16px;}
+#header .ac-gn-list .ac-gn-item a:hover{color:#ed6d00;}
+#header .ac-gn-list .ac-gn-item .active{color:#ed6d00;}
+#header .ac-gn-header{display:none;}
+#header .g-header{
+	height:65px;
+	line-height:65px;
+}
+
+.ac-gn-menuicon-bread{cursor: pointer;position: absolute;width: 17px;height: 44px;left: 16px;}
+.ac-gn-menuicon-bread-crust{display: block;width: 17px;height: 1px;background: #fff;position: relative;left: 0px;z-index: 1;-webkit-transition: -webkit-transform 0.2s;transition: transform 0.2s;}
+.ac-gn-menuicon-bread-crust-top{top: 22px;-webkit-transition: -webkit-transform 0.2s 0.2s;transition: transform 0.2s 0.2s;-webkit-transform: translateY(-3px);transform: translateY(-3px);}
+.ac-gn-menuicon-bread-crust-bottom{top: 28px;-webkit-transition: -webkit-transform 0.2s 0.2s;transition: transform 0.2s 0.2s;-webkit-transform: translateY(-3px);transform: translateY(-3px);}
+.ac-gn-menuicon-bread-top{top: 22px;-webkit-transition: -webkit-transform 0.25s 0.2scubic-bezier(0.4, 0.01, 0.165, 0.99);transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+.ac-gn-menuicon-bread-bottom{top: 21px;-webkit-transition: -webkit-transform 0.25s 0.2scubic-bezier(0.4, 0.01, 0.165, 0.99);transition: transform 0.25s 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+.ac-gn-menuicon-bread-tmp-bottom{top: 21px;transform: rotate(45deg);}
+
+
+.children_menu{background:#262626;display: none;height: auto;left: -8px;position: absolute;top: 90px;width: 130px;z-index: 999;}
+.children_menu li{line-height:36px;border-top: 1px solid #4a4a49;padding:0 8px;text-align:left;}
+.children_menu li a{font-size:14px !important; color:#fafafa !important; display:block;}
+.children_menu li a:hover{ color:#ed6d00 !important;}
+.children_menu li a .children_menu_icon{
+	float:right;
+}
+@media only screen and (max-width: 767px) {
+	#header{position:static; border-top:0;height: 44px;}
+	#header ul{width: 100%;display: block;transform: translateZ(0);}
+	#header .ac-gn-header{height:44px;display:block;background:#262626;}
+	#header .ac-gn-header{display: block;position:fixed;z-index:99;}
+	#header .ac-gn-list{display: none;height: 100%;position:fixed;z-index:99;width:50%;background:#262626;top:44px;}
+	#header .ac-gn-list .ac-gn-item{float: none;height:auto;line-height:44px;text-align:left;font-size:0.75em;display:block;width:100%; padding:0 40px; box-sizing:border-box;}
+	#header .ac-gn-list .ac-gn-item a{color:#fff !important;display:block;padding:0 10px;border-bottom: 1px solid #3e3e3e;background:none !important;}
+	#header .ac-gn-list .ac-gn-item a:hover,#header .ac-gn-list .ac-gn-item .active{color:#fff;background:none;}
+	.ac-gn-list li .children_menu{position:relative;top:0;left:0;width:100%;border-bottom: 1px solid #d3d3d3;background:none;padding:5px 0;border-radius:0;}
+	.children_menu li{border:0;padding:0;}
+	.ac-gn-list li .children_menu a{border:0 !important;line-height:34px;}
+	#header .ac-gn-item-logo{display: none;}
+	#header .ac-gn-menuicon-logo{padding:10px 0;}
+	#header .ac-gn-menuicon-logo img{height:24px;display:block;margin:0 auto;}
+	#main-page-mask{display: none;width: 100%;height: 100%;position: fixed;top: 0;right: 0;z-index: 10;cursor: pointer;}
+	.footer{padding:10px 0;}
+	.footer span{display:block;}
+}
+/*************************/
+
+
+
+
+
+
+
+
+
+
 
 .rightButton{
 	position: fixed;
