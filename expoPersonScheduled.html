@@ -1,10 +1,806 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>一带一路服务平台-</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/master.css" rel="stylesheet" type="text/css">
+<link href="css/addition.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/master.js"></script>
 </head>
 
 <body>
+<div id="header" class="noramlHd">
+	<div class="header-nav pr">	
+		<ul class="ac-gn-header">
+				<div class="ac-gn-menuicon-bread" onclick="javascript:changeMenu();">
+					<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+				</div>
+			<div class="ac-gn-menuicon-logo"><a href="index.html"><img src="img/logo.png"></a></div>
+		</ul>
+		<div class="g-header">
+			<div class="clearfix">
+				<div class="ac-gn-item-logo"><a href="index.html"><img src="img/logo.png"></a></div>
+				<ul class="ac-gn-list">			
+					<li class="ac-gn-item"><a href="index.html" class="nav_item01">首页</a></li>
+					<li class="ac-gn-item"><a href="shanghaiSail.html" class="nav_item02">上海之帆</a></li>			
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item03">展会</a>
+						<div class="children_menu">
+							<ul>
+								<li>
+									<a href="overview.html"><span class="text">本届展会概况</span></a>
+								</li>
+								<li>
+									<a href="expoCompanyScheduled.html"><span class="text">展位预定</span></a>
+								</li>
+								<li>
+									<a href="expoPreView.html"><span class="text">下届展会预告</span></a>
+								</li>
+								<li>
+									<a href="exhibitionReview.html"><span class="text">往届回顾</span></a>
+								</li>
+								<li>
+									<a href="exhibitionPhotos.html"><span class="text">展会掠影</span></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item05">展商</a>
+						<div class="children_menu">
+							<ul>
+								<li>
+									<a href="expoSchedule.html"><span class="text">展会日程</span></a>
+								</li>
+								<li>
+									<a href="advertising.html"><span class="text">特别鸣谢</span></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item06">观众</a>
+						<div class="children_menu">
+							<ul>
+								<li><a href="expoPersonScheduled.html">观众登记</a></li>
+								<li><a href="expoTraffic.html">展馆位置</a></li>
+								<li><a href="exhibitionerList.html">展商查询</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="exchangeActivety.html" class="nav_item07">交流活动</a></li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item05">媒体</a>
+						<div class="children_menu">
+							<ul>
+								<li><a href="mediaReport.html">国内外报导</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="tradePost.html" class="nav_item05">商情发布</a></li>
+					<li class="ac-gn-item"><a href="contactUs.html" class="nav_item05">联系我们</a></li>
+					<li class="ac-gn-item last-language">
+                        <a id="english">English</a>
+                        <a id="chinese">中文</a>
+                    </li>
+				</ul>
+				<div id="main-page-mask"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="KV">
+</div>
+<div class="wrap p_w">
+	<div class="pagecontent">
+		<div class="expo_content">
+			<form class="layui-form layui-form-pane" action="" onsubmit="return false;">
+				<div>
+					<div class="layui-form-item">
+						<h4>
+							观众参展登记
+							<button id="btnChangeLanguage" style="margin-left:62em;font-weight:100;width:100px;"
+							class="layui-btn layui-btn-normal language">
+								语言
+							</button>
+						</h4>
+						<div style=" text-align:right;margin-top:-5px;">
+							<label style="height:30px;width:80px;margin-right:30px;font-size:18px;color:#004387;">
+								距本届展会开幕还有:
+								<span style="color:red;font-size:24px;margin-left:10px;" id="txtDays">
+									98
+								</span>
+								天
+							</label>
+							<label style="height:30px;width:80px;margin-right:30px;font-size:18px;color:#004387;">
+								本周报名人数:
+								<span style="color:red;font-size:24px;margin-left:10px;" id="personCount">
+									201
+								</span>
+							</label>
+						</div>						
+					</div>
+					<div class="layui-form-item">
+						<p style="text-align:left;">
+							“上海之帆”经贸巡展，是由上海市经济团体联合会、上海市工业经济联合会和“上海之帆”经贸巡展组委会联合主办，是上海市规模最大、全方位展示上海经贸品牌的出展项目之一。自2012年开始，“上海之帆”经贸巡展已在阿尔巴尼亚、塞尔维亚、斯洛文尼亚、爱沙尼亚、拉脱维亚、立陶宛、白俄罗斯、乌克兰和匈牙利等国家连续举办多年。
+						</p>
+					</div>
+					<div class="layui-form-item">
+						<h2>
+							<strong>
+								注意事项
+							</strong>
+						</h2>
+						<div style="text-align:left;">
+							<p>
+								<span style="color:#f00;">
+									&nbsp;*
+								</span>
+								注册成功后，页面会自动生成电子门票，
+								<strong>
+									凭下载后的电子门票即可入场
+								</strong>
+								，并兑换中国上海特色礼品一份，数量有限，发完即止。
+							</p>
+							<p>
+								<span style="color:#f00;">
+									&nbsp;*
+								</span>
+								每人每天凭券兑换一次礼品。
+							</p>
+							<p>
+								<span style="color:#f00;">
+									&nbsp;*
+								</span>
+								请勿重复填写公司名和手机号。如有疑问，请以邮件告知：info@sailofshanghai.com
+							</p>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h3>
+							参观项目:
+						</h3>
+						<div class="expo">
+							<ul class="clearfix">
+								<li>
+									<input type="checkbox" name="Item" lay-skin="primary" value="“上海之帆”——走进东盟（新加坡）经贸巡展"
+									title="“上海之帆”——走进东盟（新加坡）经贸巡展">
+									<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+										<span>
+											“上海之帆”——走进东盟（新加坡）经贸巡展
+										</span>
+										<i class="layui-icon layui-icon-ok">
+										</i>
+									</div>
+								</li>
+								<li>
+									<input type="checkbox" name="Item" lay-skin="primary" value="“上海之帆”——走进东盟（泰国）经贸巡展"
+									title="“上海之帆”——走进东盟（泰国）经贸巡展">
+									<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+										<span>
+											“上海之帆”——走进东盟（泰国）经贸巡展
+										</span>
+										<i class="layui-icon layui-icon-ok">
+										</i>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h2>
+							<strong>
+								您感兴趣的B2B交流对接会:
+							</strong>
+						</h2>
+						<div class="clearfix">
+							
+						</div>
+						<div class="layui-inline" style="width:30%; text-align:left;float:left;">
+							<label style="margin-left:10px;">
+								“上海之帆”——走进东盟（新加坡）经贸巡展
+							</label>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="1化工主题对接会"
+							title="化工主题对接会" class="CheckItem">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									化工主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="1农业主题对接会"
+							title="农业主题对接会" class="CheckItem">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									农业主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="1纺织主题对接会"
+							title="纺织主题对接会" class="CheckItem">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									纺织主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="1日用消费品主题对接会"
+							title="日用消费品主题对接会" class="CheckItem">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									日用消费品主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="1医疗器械与保健主题对接会"
+							title="医疗器械与保健主题对接会" class="CheckItem">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									医疗器械与保健主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+						</div>
+						<div class="layui-inline" style="width:30%; float:left;text-align:left;">
+							<label style="margin-left:10px;">
+								“上海之帆”——走进东盟（泰国）经贸巡展
+							</label>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="2科技与通讯专题"
+							title="科技与通讯专题" class="CheckItem2">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									科技与通讯专题
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="2光电子及LED设备主题对接会"
+							title="光电子及LED设备主题对接会" class="CheckItem2">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									光电子及LED设备主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="2化工主题对接会"
+							title="化工主题对接会" class="CheckItem2">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									化工主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="2物流及服务贸易主题对接会"
+							title="物流及服务贸易主题对接会" class="CheckItem2">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									物流及服务贸易主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Remark" lay-skin="primary" value="2汽配、钢铁和有色金属主题对接会"
+							title="汽配、钢铁和有色金属主题对接会" class="CheckItem2">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									汽配、钢铁和有色金属主题对接会
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h2 style="border-bottom: 3px solid #0072bc;text-align:left;font-size:18px;">
+							<strong>
+								基本信息
+							</strong>
+						</h2>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							称呼
+						</label>
+						<div class="layui-input-inline" style="width:150px;">
+							<select id="ddlNamed">
+								<option value="先生">
+									先生
+								</option>
+								<option value="女士">
+									女士
+								</option>
+								<option value="小姐">
+									小姐
+								</option>
+							</select>
+							<div class="layui-unselect layui-form-select">
+								<div class="layui-select-title">
+									<input type="text" placeholder="请选择" value="先生" readonly class="layui-input layui-unselect">
+									<i class="layui-edge">
+									</i>
+								</div>
+								<dl class="layui-anim layui-anim-upbit">
+									<dd lay-value="先生" class="layui-this">
+										先生
+									</dd>
+									<dd lay-value="女士" class="">
+										女士
+									</dd>
+									<dd lay-value="小姐" class="">
+										小姐
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							姓
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="FamilyName" lay-verify="required" id="txtFamilyName"
+							value="" autocomplete="off" placeholder="姓" class="layui-input">
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							名
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Name" lay-verify="required" id="txtName" value=""
+							autocomplete="off" placeholder="名" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							公司
+						</label>
+						<div class="layui-input-inline" style="width:430px">
+							<input type="text" name="Company" lay-verify="required" id="txtCompany"
+							value="" autocomplete="off" placeholder="公司" class="layui-input">
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							职位
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Position" lay-verify="required" id="txtPosition"
+							value="" autocomplete="off" placeholder="职位" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							地址
+						</label>
+						<div class="layui-input-inline" style="width:430px">
+							<input type="text" name="Address" lay-verify="required" id="txtAddress"
+							value="" autocomplete="off" placeholder="地址" class="layui-input">
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							邮编
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Postcode" lay-verify="required" id="txtPostcode"
+							value="" autocomplete="off" placeholder="邮编" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							国家(地区)
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Country" lay-verify="required" id="txtCountry"
+							value="" autocomplete="off" placeholder="国家(地区)" class="layui-input baseDict"
+							dictcode="Country" showname="国家">
+							
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							省份
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Province" lay-verify="required" id="txtProvince"
+							value="" autocomplete="off" placeholder="省" class="layui-input baseDict"
+							dictcode="Province" showname="省份">
+							
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							城市
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="City" lay-verify="required" id="txtCity" value=""
+							autocomplete="off" placeholder="市" class="layui-input baseDict" dictcode="City"
+							showname="城市">
+							<!--<select id="ddlCity">
+							<option value="-1">--请选择市区---</option>
+							</select>-->
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							电话
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Telephone" lay-verify="required" id="txtTelephone"
+							value="" autocomplete="off" placeholder="电话" class="layui-input">
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							手机
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="MobilePhone" lay-verify="required" id="txtMobilePhone"
+							value="" autocomplete="off" placeholder="手机" class="layui-input">
+						</div>
+						<label class="layui-form-label" style="width:120px;">
+							<span style="color:#f00;">
+								&nbsp;*
+							</span>
+							邮箱
+						</label>
+						<div class="layui-input-inline" style="width:150px">
+							<input type="text" name="Email" lay-verify="required" id="txtEmail" value=""
+							autocomplete="off" placeholder="邮箱" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label" style="width:120px;">
+							公司网址
+						</label>
+						<div class="layui-input-inline" style="width:430px">
+							<input type="text" name="WebSite" lay-verify="required" id="txtWebSite"
+							value="" autocomplete="off" placeholder="公司网址" class="layui-input baseDict"
+							dictcode="Sex" showname="Sex">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h2 style="border-bottom: 3px solid #0072bc;text-align:left;font-size:16px;">
+							<strong>
+								观众类型
+							</strong>
+						</h2>
+						<div style="text-align:left;">
+							<input type="radio" name="CompanyType" value="生产商/品牌商" title="生产商/品牌商">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									生产商/品牌商
+								</div>
+							</div>
+							<input type="radio" name="CompanyType" value="政府机构/科研机构/事业单位" title="政府机构/科研机构/事业单位">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									政府机构/科研机构/事业单位
+								</div>
+							</div>
+							<input type="radio" name="CompanyType" value="经销商/代理商" title="经销商/代理商">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									经销商/代理商
+								</div>
+							</div>
+							<input type="radio" name="CompanyType" value="用户/买家" title="用户/买家">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									用户/买家
+								</div>
+							</div>
+							<input type="radio" name="CompanyType" value="市场/公关/传媒" title="市场/公关/传媒">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									市场/公关/传媒
+								</div>
+							</div>
+							<input type="radio" name="CompanyType" value="展会爱好者/参观者" title="展会爱好者/参观者">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									展会爱好者/参观者
+								</div>
+							</div>
+							<br>
+							<input type="radio" name="CompanyType" value="其他" title="其他">
+							<div class="layui-unselect layui-form-radio">
+								<i class="layui-anim layui-icon">
+									
+								</i>
+								<div>
+									其他
+								</div>
+							</div>
+							<input type="text" style="width:60%;" id="otherType">
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<h2 style="border-bottom: 3px solid #0072bc;text-align:left;font-size:16px;">
+							<strong>
+								问卷调查
+							</strong>
+						</h2>
+						<h3 style="text-align:left;">
+							您的公司性质:
+						</h3>
+						<div style="text-align:left;">
+							<input type="checkbox" name="Interest" lay-skin="primary" value="服装服饰和日用消费品展区"
+							title="服装服饰和日用消费品展区：纺织服装、家用电器、钟表、装饰礼品、玩具、箱包及户外用品等" style="width:800px;">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									服装服饰和日用消费品展区：纺织服装、家用电器、钟表、装饰礼品、玩具、箱包及户外用品等
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Interest" lay-skin="primary" value="智能及高端装备展区"
+							title="智能及高端装备展区：人工智能、物联网、半导体照明工程设备、工业零部件、信息通信技术装备、节能环保装备 、新能源电力电工装备">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									智能及高端装备展区：人工智能、物联网、半导体照明工程设备、工业零部件、信息通信技术装备、节能环保装备 、新能源电力电工装备
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Interest" lay-skin="primary" value="化工和有色金属展区"
+							title="化工和有色金属展区：化工产品、新材料、有色金属原材料、钢铁产品及延伸产品">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									化工和有色金属展区：化工产品、新材料、有色金属原材料、钢铁产品及延伸产品
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Interest" lay-skin="primary" value="医疗设备和医药保健展区"
+							title="医疗设备和医药保健展区：医疗器械、养老康复产品、制药机械与设备 ">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									医疗设备和医药保健展区：医疗器械、养老康复产品、制药机械与设备
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Interest" lay-skin="primary" value="建材家具展区"
+							title="建材家具展区：建筑材料、绿色建材、种植机械设备、五金配件、基础设施建设等">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									建材家具展区：建筑材料、绿色建材、种植机械设备、五金配件、基础设施建设等
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<br>
+							<input type="checkbox" name="Interest" lay-skin="primary" value="其他" title="其他">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									其他
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="text" style="width:80%;" id="otherInterest">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h3 style="text-align:left;">
+							此次参观的主要目的:
+						</h3>
+						<div style="text-align:left;">
+							<input type="checkbox" name="Aim" lay-skin="primary" value="寻求供应商/经销商/商业伙伴"
+							title="寻求供应商/经销商/商业伙伴">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									寻求供应商/经销商/商业伙伴
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="checkbox" name="Aim" lay-skin="primary" value="采购产品" title="采购产品">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									采购产品
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="checkbox" name="Aim" lay-skin="primary" value="寻找新产品、获悉最新行业趋势"
+							title="寻找新产品、获悉最新行业趋势">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									寻找新产品、获悉最新行业趋势
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="checkbox" name="Aim" lay-skin="primary" value="下订单" title="下订单">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									下订单
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="checkbox" name="Aim" lay-skin="primary" value="其他" title="其他">
+							<div class="layui-unselect layui-form-checkbox" lay-skin="primary">
+								<span>
+									其他
+								</span>
+								<i class="layui-icon layui-icon-ok">
+								</i>
+							</div>
+							<input type="text" style="width:60%;" id="otherAim">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<h3 style="text-align:left;">
+							您知悉本展会的途径:
+						</h3>
+						<div style="text-align:left;">
+							<input type="checkbox" name="Way" lay-skin="primary" value="参加过之前展会" title="参加过之前展会">
+							<input type="checkbox" name="Way" lay-skin="primary" value="通过展商/朋友推荐" title="通过展商/朋友推荐">
+							<input type="checkbox" name="Way" lay-skin="primary" value="主办方印刷品" title="主办方印刷品">
+							<input type="checkbox" name="Way" lay-skin="primary" value="主办方电子邮件" title="主办方电子邮件">
+							<input type="checkbox" name="Way" lay-skin="primary" value="主办方电话邀请" title="主办方电话邀请">
+							<input type="checkbox" name="Way" lay-skin="primary" value="主办方官方网站 www.sailofshanghailc.com" title="主办方官方网站 www.sailofshanghail.com">
+							<br>
+							<input type="checkbox" name="Way" lay-skin="primary" value="报纸、杂志、网站广告" title="报纸、杂志、网站广告">
+							<input type="checkbox" name="Type" lay-skin="primary" value="其他" title="其他">
+							<input type="text" style="width:60%;" id="otherWay">
+						</div>
+					</div>
+					
+					<div class="layui-form-item">
+						<div style="text-align:center;">
+							<button class="layui-btn layui-btn-normal" id="btnSubmit">
+								确认提交
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="login-ft">
+    <div class="footer-copyright p_w">
+		<ul class="clearfix">
+			<li class="" style="width:480px;">
+				<h5>
+					主办单位
+				</h5>
+				<div class="main">
+					<ul>
+						<li>
+							<img src="img/index/mainIcon1.png" style="height:80px;">
+						</li>
+						<li>
+							<img src="img/index/mainIcon2.png" style="height:80px;">
+						</li>
+						<li>
+							<img src="img/index/mainIcon4.png" style="height:60px;padding-top:5px;">
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li style="width:420px;">
+				<h5>
+					联系我们
+				</h5>
+				<p>
+					上海之帆会展有限公司
+				</p>
+				<p>
+					上海市淮海中路918号久事复兴大厦24楼A
+				</p>
+				<p>
+					电话: +86 021-61360561/021-61360563
+				</p>
+				<p>
+					传真: 0086-21-61360562
+				</p>
+				<p>
+					邮箱: info@sailofshanghai.com
+				</p>
+			</li>
+			<li style="width:300px; ">
+				<h5>
+					关注我们
+				</h5>
+				<img src="img/qrcode.jpg" style="width:160px;height:160px; ">
+				<p>
+					官方微信：上海之帆
+				</p>
+			</li>
+		</ul>
+		<p class="ft-copyright">
+			<a href="http://www.miitbeian.gov.cn/" target="_blank" title="沪ICP备19012898号">
+				沪ICP备19012898号
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;©2002-2019 上海之帆会展有限公司&nbsp;&nbsp;版权所有&nbsp;&nbsp;
+			<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102005367">
+				<img src="img/index/ICPIcon.png" />
+				沪公网安备 31010102005367号
+			</a>
+		</p>     
+    </div>
+</div>
+<script src="js/layui/layui.js"></script>
+<script>
+//Demo
+layui.use('form', function(){
+  var form = layui.form;
+  
+  form.on('switch(switchTest)', function(data){
+    layer.tips('开关checked：'+ (this.checked ? 'true' : 'false'), data.othis)
+  });
+  
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+    layer.msg(JSON.stringify(data.field));
+    return false;
+  });
+});
+</script>
 </body>
 </html>

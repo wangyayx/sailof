@@ -1,0 +1,6 @@
+{
+  "login.title": "Please sign in",
+  "login.error": "username or password error",
+  "password.error.NotEmpty": "password not null",
+  "username.error.NotEmpty": "username not null"
+}

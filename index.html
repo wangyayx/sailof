@@ -10,11 +10,12 @@
 <link href="css/master.css" rel="stylesheet" type="text/css">
 <link href="css/addition.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/master.js"></script>
 </head>
 
 <body>
 <div id="header" class="noramlHd">
-	<div class="p_w pr">	
+	<div class="header-nav pr">	
 		<ul class="ac-gn-header">
 				<div class="ac-gn-menuicon-bread" onclick="javascript:changeMenu();">
 					<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
@@ -24,28 +25,66 @@
 		</ul>
 		<div class="g-header">
 			<div class="clearfix">
-				<div class="ac-gn-item ac-gn-item-logo"><a href="index.html"><img src="img/logo.png"></a></div>
+				<div class="ac-gn-item-logo"><a href="index.html"><img src="img/logo.png"></a></div>
 				<ul class="ac-gn-list">			
-					<li class="ac-gn-item"><a href="index.html" class="nav_item01">首页</a>
+					<li class="ac-gn-item"><a href="index.html" class="nav_item01">首页</a></li>
+					<li class="ac-gn-item"><a href="shanghaiSail.html" class="nav_item02">上海之帆</a></li>			
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item03">展会</a>
 						<div class="children_menu">
 							<ul>
 								<li>
-									<a href="pro_list1.html"><span class="text">能源菜单A</span></a>
+									<a href="overview.html"><span class="text">本届展会概况</span></a>
 								</li>
-								<li class="item">
-									<a href="#"><span class="text">能源菜单B</span></a>
+								<li>
+									<a href="expoCompanyScheduled.html"><span class="text">展位预定</span></a>
+								</li>
+								<li>
+									<a href="expoPreView.html"><span class="text">下届展会预告</span></a>
+								</li>
+								<li>
+									<a href="exhibitionReview.html"><span class="text">往届回顾</span></a>
+								</li>
+								<li>
+									<a href="exhibitionPhotos.html"><span class="text">展会掠影</span></a>
 								</li>
 							</ul>
 						</div>
 					</li>
-					<li class="ac-gn-item"><a href="memory.html" class="nav_item02">上海之帆</a></li>			
-					<li class="ac-gn-item"><a href="audio.html" class="nav_item03">展会</a></li>
-					<li class="ac-gn-item"><a href="home.html" class="nav_item05">展商</a></li>
-					<li class="ac-gn-item"><a href="arrival.html" class="nav_item06">观众</a></li>
-					<li class="ac-gn-item"><a href="excellent.html" class="nav_item07">交流活动</a></li>
-					<li class="ac-gn-item"><a href="home.html" class="nav_item05">媒体</a></li>
-					<li class="ac-gn-item"><a href="home.html" class="nav_item05">商情发布</a></li>
-					<li class="ac-gn-item"><a href="home.html" class="nav_item05">联系我们</a></li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item05">展商</a>
+						<div class="children_menu">
+							<ul>
+								<li>
+									<a href="expoSchedule.html"><span class="text">展会日程</span></a>
+								</li>
+								<li>
+									<a href="advertising.html"><span class="text">特别鸣谢</span></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item06">观众</a>
+						<div class="children_menu">
+							<ul>
+								<li><a href="expoPersonScheduled.html">观众登记</a></li>
+								<li><a href="expoTraffic.html">展馆位置</a></li>
+								<li><a href="exhibitionerList.html">展商查询</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="exchangeActivety.html" class="nav_item07">交流活动</a></li>
+					<li class="ac-gn-item"><a href="javascript:void(0)" class="nav_item05">媒体</a>
+						<div class="children_menu">
+							<ul>
+								<li><a href="mediaReport.html">国内外报导</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="ac-gn-item"><a href="tradePost.html" class="nav_item05">商情发布</a></li>
+					<li class="ac-gn-item"><a href="contactUs.html" class="nav_item05">联系我们</a></li>
+					<li class="ac-gn-item last-language">
+                        <a id="english">English</a>
+                        <a id="chinese">中文</a>
+                    </li>
 				</ul>
 				<div id="main-page-mask"></div>
 			</div>
@@ -103,7 +142,7 @@
 <div class="p_w wrap">
 	<div class="clearfix">
 		<div class="in_sail">
-			<div class="content_title content_titles"><a href="#">上海之帆</a></div>
+			<div class="content_title content_titles"><a href="shanghaiSail.html">上海之帆</a></div>
 			<img src="img/index/zhanhui.png" />
 		</div>
 		<div class="brightPoint_box">
@@ -620,13 +659,13 @@
 	<ul>
 		<li class="cur">
 			<a href="expoPersonScheduled.html">
-				<i class="iconfont">&#xe600;</i>
+				<i class="iconfonts">&#xe600;</i>
 				我要参观
 			</a>
 		</li>
 		<li class="cur">
 			<a href="expoCompanyScheduled.html">
-				<i class="iconfont">&#xe603;</i>
+				<i class="iconfonts">&#xe603;</i>
 				我要参展
 			</a>
 		</li>

@@ -1,0 +1,7 @@
+{
+  "login.title": "登录",
+  "login.error": "用户名/密码错误",
+  "password.error.NotEmpty": "密码不能为空",
+  "username.error.Pattern": "必须为非中文，最少4位最多30位",
+  "password.error.Pattern": "必须为大小写英文或数字，最少6位最多20位"
+}
